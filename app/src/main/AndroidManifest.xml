@@ -23,6 +23,30 @@
             </intent-filter>
 
         </activity>
+
+
+
+        <!-- StartUp配置 -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <!-- 初始化Retrofit -->
+            <meta-data
+                android:name="com.cangming.jetpack.init.NetWorkInitializer"
+                android:value="androidx.startup" />
+
+            <!--初始化mmkv-->
+            <meta-data
+                android:name="com.cangming.jetpack.init.MmkvIniaializer"
+                android:value="androidx.startup" />
+            <!--初始化工具类-->
+            <meta-data
+                android:name="com.cangming.jetpack.init.WidgetInitializer"
+                android:value="androidx.startup" />
+
+        </provider>
     </application>
 
 </manifest>

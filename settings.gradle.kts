@@ -36,3 +36,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "jetpack-compose-mvi-unittest"
 include(":app")
+include(":net")
